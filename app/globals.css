@@ -25,3 +25,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.gradient {
+  -webkit-text-stroke: .1em;
+  -webkit-text-stroke-color: black;
+  
+  
+}
+.background-image {
+  min-height: 100vh;
+  background-image: url('../img/introBackground.jpg');
+  background-size: cover;
+  background-position: center;
+}
