@@ -6,7 +6,6 @@ import Intro from './components/intro'
 import About from './components/about'
 import ProjectComponent from './components/projects'
 import Footer from './components/footer'
-import ContactForm from './components/contactForm'
 
 
 
@@ -18,7 +17,6 @@ export default function Home() {
       <Intro />
       <About />
       <ProjectComponent />
-      <ContactForm />
       
       
       <Footer />
