@@ -10,7 +10,7 @@ const Nav = () => {
     <>
     
 
-<div className="navbar bg-base-300 fixed">
+<div className="navbar bg-base-300 fixed w-full">
   <Link href='/'>
   <Image className='ml-5' src={code} alt='logo' />
   </Link>

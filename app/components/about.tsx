@@ -1,6 +1,8 @@
+
+
+
 import React from "react";
 import Image from "next/image";
-import useState from "react";
 import {
   CAccordion,
   CAccordionBody,
@@ -10,28 +12,26 @@ import {
   CListGroup,
   CListGroupItem,
 } from "@coreui/react";
-//import CAccordion from '@coreui/react/src/components/accordion/CAccordion'
 import "@coreui/coreui/dist/css/coreui.min.css";
 
 const About = () => {
   return (
     <>
-   
       <div>
-         <section id="about" className="bg-white">
+        <section id="about" className="bg-white p-4">
           <h1 className="text-center underline mt-4">About Me</h1>
-          <div className="grid md:grid-cols-1  lg:grid-cols-2  gap-4 items-center">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 items-center">
             <div className="sm:order-2">
               <Image
                 className="mx-auto"
                 src={require("../../img/firstAbout.jpg")}
                 alt="Me"
-                width={400} // Adjust the width of the image as needed
-                height={300} // Adjust the height of the image as needed
+                width={400}
+                height={300}
               />
             </div>
             <div className="sm:order-2 md:order-2 lg:order-2">
-              <p className="mx-auto  mt-4 text-justify sm:text-left mr-5 px-3 text-wrap">
+              <p className="mx-auto mt-4 text-justify sm:text-left xs:w-80 mr-5 px-3 text-wrap">
               I am a passionate individual with expertise in React, React Native, 
               MongoDB, Node.js, HTML, and CSS. Hailing from the heart of Oklahoma, 
               I possess a deep connection to my roots and embrace the values instilled
@@ -40,21 +40,20 @@ const About = () => {
                 tranquil beauty of nature's creations. Golfing under the open sky and the
                  serenity of fishing in quiet waters are pursuits that bring me immense happiness
                   and relaxation. Embracing both the technological advancements and the tranquility
-                   of nature, I find a harmonious balance that enriches my life.                
+                   of nature, I find a harmonious balance that enriches my life. 
               </p>
-              
             </div>
-            <div className=" sm:order-2  md:order-2 lg:order-3 grid-cols-3">
-            <Image
+            <div className="sm:order-2 md:order-2 lg:order-3">
+              <Image
                 className="mx-auto"
                 src={require("../../img/best3.jpg")}
                 alt="Me"
-                width={400} // Adjust the width of the image as needed
-                height={300} // Adjust the height of the image as needed
+                width={400}
+                height={300}
               />
             </div>
-            <div className="sm:order-2 md:order-2 lg:order-2 ml-5 mr-5">
-              <h2 className="text-center underline">Education</h2>
+            <div className="sm:order-2 md:order-2 lg:order-2 xs:w-80">
+            <h2 className="text-center underline">Education</h2>
               <CAccordion activeItemKey={2}>
                 <CAccordionItem itemKey={1}>
                   <CAccordionHeader>
@@ -149,57 +148,47 @@ const About = () => {
                 </CAccordionItem>
               </CAccordion>
             </div>
-            
-            
             <div className="sm:order-2 md:order-2 lg:order-3">
               <Image
                 className="mx-auto"
                 src={require("../../img/second.jpg")}
                 alt="Me"
-                width={300} // Adjust the width of the image as needed
-                height={200} // Adjust the height of the image as needed
+                width={300}
+                height={200}
               />
             </div>
-            
-            <div className=" sm:order-2 md:order-2 lg:order-3  mb-5  ml-5 mr-5 ">
-              <h2 className="mx-auto text-center underline">Skills</h2>
+            <div className="sm:order-2 md:order-2 lg:order-3 mb-5  xs:w-60">
+            <h2 className="mx-auto text-center underline">Skills</h2>
               <table className="table-auto w-full border-collapse border border-gray-300 mr-5 " width={200}>
                 <thead>
                   <tr className="bg-blue-300">
                     <th className="px-4 py-2 border">Skill</th>
-                    <th className="px-4 py-2 border">Proficiency</th>
                     <th className="px-4 py-2 border">Experience</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">React</td>
-                    <td className="px-4 py-2 border">intermediate</td>
                     <td className="px-4 py-2 border">1 year</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">JavaScript</td>
-                    <td className="px-4 py-2 border">intermediate</td>
                     <td className="px-4 py-2 border">1 year</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">React Native</td>
-                    <td className="px-4 py-2 border">average</td>
                     <td className="px-4 py-2 border">6 months</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">Mongo DB</td>
-                    <td className="px-4 py-2 border">average</td>
                     <td className="px-4 py-2 border">1 month</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">Node</td>
-                    <td className="px-4 py-2 border">Average</td>
                     <td className="px-4 py-2 border">1 month</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">Next JS</td>
-                    <td className="px-4 py-2 border">normal</td>
                     <td className="px-4 py-2 border">1 month</td>
                   </tr>
                   {/* Add more rows for other skills */}
@@ -207,7 +196,7 @@ const About = () => {
               </table>
             </div>
           </div>
-          </section>
+        </section>
       </div>
     </>
   );

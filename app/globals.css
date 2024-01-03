@@ -29,6 +29,7 @@ body {
 .gradient {
   -webkit-text-stroke: .1em;
   -webkit-text-stroke-color: black;
+  border: black;
   
   
 }

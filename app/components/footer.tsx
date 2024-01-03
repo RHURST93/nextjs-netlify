@@ -7,7 +7,7 @@ import { CButton } from '@coreui/react';
 const Footer = () => {
   return (
     <>
-    <footer className="bg-base-300 text-white py-4">
+    <footer className="bg-base-300 text-white py-4 ">
       <div className="container mx-auto flex items-center justify-between">
       <Image className='ml-5' src={code} alt='logo' />
         <div className="flex space-x-4">
