@@ -27,12 +27,15 @@ const projects: Project[] = [
     photo: nextAppImage,
   },
 ];
-
+interface ProjectsProps {
+    darkMode: boolean;
+  }
 const ProjectComponent: React.FC = () => {
+
   return (
-    <div className="mx-auto max-w-4xl px-6"> {/* Centers content and sets max width */}
-      <section id="projects">
-        <h2 className="text-2xl font-bold mb-4">Projects</h2>
+    <div className="mx-auto max-w-4xl px-6 "> {/* Centers content and sets max width */}
+      <section className='bg-white' id="projects">
+        <h2 className="text-2xl font-bold mb-4 underline">Projects</h2>
         <div className="grid gap-8 lg:grid-cols-2"> {/* Grid layout for projects */}
           {projects.map((project) => (
             <div key={project.id} className="border p-4">
