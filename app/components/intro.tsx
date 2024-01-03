@@ -51,7 +51,7 @@ const Intro = () => {
 
           <div className="flex justify-center">
             <Link href="mailto:rahurst93@gmail.com">
-              <CButton className="px-5 mb-4" color="primary">Contact Me</CButton>
+              <CButton className="px-5 mb-4 border-2 border-white hover:border-1" color="primary">Contact Me</CButton>
             </Link>
           </div>
 
