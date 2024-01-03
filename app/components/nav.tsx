@@ -18,10 +18,10 @@ const Nav = () => {
           <Link href="/" className="hover:text-gray-400 transition-colors duration-300 no-underline">
             Home
           </Link>
-          <Link href="#about" className="hover:text-gray-400 transition-colors duration-300 no-underline">
+          <Link href="/about" className="hover:text-gray-400 transition-colors duration-300 no-underline">
             About
           </Link>
-          <Link href="#projects" className="hover:text-gray-400 transition-colors duration-300 no-underline">
+          <Link href="/projects" className="hover:text-gray-400 transition-colors duration-300 no-underline">
             Projects
           </Link>
           {/* Add more links as needed */}

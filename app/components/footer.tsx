@@ -1,5 +1,5 @@
 import React from 'react';
-import NextLink from 'next/link';
+import Link from 'next/link';
 import Image from 'next/image';
 import code from '../../img/code.png';
 import { CButton } from '@coreui/react';
@@ -18,21 +18,21 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-slate-600 underline">Links</h3>
-            <NextLink href="/" className="no-underline">
+            <Link href="/" className="no-underline">
               Home
-            </NextLink>
-            <NextLink href="#about" className="no-underline">
+            </Link>
+            <Link href="/about" className="no-underline">
               About
-            </NextLink>
-            <NextLink href="#projects" className="no-underline">
+            </Link>
+            <Link href="/projects" className="no-underline">
               Projects
-            </NextLink>
+            </Link>
           </div>
 
           {/* Contact Me Button */}
-          <NextLink href="mailto:rahurst93@gmail.com" className="no-underline">
+          <Link href="mailto:rahurst93@gmail.com" className="no-underline">
             <CButton color="primary">Contact Me</CButton>
-          </NextLink>
+          </Link>
         </div>
 
         {/* Bottom Text */}
