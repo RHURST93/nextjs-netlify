@@ -18,13 +18,13 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-slate-600 underline">Links</h3>
-            <Link href="/" className="no-underline">
+            <Link href="#" className="no-underline">
               Home
             </Link>
-            <Link href="/about" className="no-underline">
+            <Link href="#about" className="no-underline">
               About
             </Link>
-            <Link href="/projects" className="no-underline">
+            <Link href="#projects" className="no-underline">
               Projects
             </Link>
           </div>
