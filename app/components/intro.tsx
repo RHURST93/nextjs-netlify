@@ -4,6 +4,9 @@ import TextTransition, { presets } from "react-text-transition";
 import Link from 'next/link';
 import { CButton } from "@coreui/react";
 import headshot from '../../img/headshot.jpg'
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const text = ["React", "React Native", "Next JS", "Node JS", "Mongo DB"];
 
@@ -26,6 +29,24 @@ const Intro = () => {
               height={150}
               alt="Picture of developer"
             />
+            
+            <div className="flex justify-center space-x-4 mt-4" style={{fontSize: 20}}>
+            <a href="https://github.com/RHURST93" target="_blank" rel="noopener noreferrer" className="text-blue-300  hover:text-neutral-950">
+              <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
+              <FaGithub />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/randy-hurst-2075bab0" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-neutral-950">
+              <svg className="h-10 w-8" fill="currentColor" viewBox="0 0 24 24">
+              <FaLinkedin />
+              </svg>
+            </a>
+            <a href="#" className="text-blue-300 hover:text-neutral-950">
+              <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
+              <FaFacebook />
+              </svg>
+            </a>
+          </div>
           </div>
 
           <div className="text-center mt-10 mb-10 text-3xl md:text-5xl lg:text-6xl">
@@ -58,23 +79,7 @@ const Intro = () => {
             </Link>
           </div>
 
-          <div className="flex justify-center space-x-6">
-            <a href="https://github.com/RHURST93" target="_blank" rel="noopener noreferrer" className="text-blue-300  hover:text-neutral-950">
-              <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
-                {/* GitHub SVG */}
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/randy-hurst-2075bab0" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-neutral-950">
-              <svg className="h-10 w-8" fill="currentColor" viewBox="0 0 24 24">
-                {/* LinkedIn SVG */}
-              </svg>
-            </a>
-            <a href="#" className="text-blue-300 hover:text-neutral-950">
-              <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
-                {/* Placeholder SVG */}
-              </svg>
-            </a>
-          </div>
+          
         </div>
       </section>
     </>

@@ -33,3 +33,6 @@ body {
   background-size: cover;
   background-position: center;
 }
+.github:hover {
+  color: black;
+}
