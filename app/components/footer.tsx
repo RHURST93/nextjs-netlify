@@ -42,7 +42,7 @@ const Footer = () => {
             <CButton color="primary">Contact Me</CButton>
           </Link>
         </div>
-        <a href="about">About</a>
+        <a href="#about">About</a>
 
         {/* Bottom Text */}
         <div className="text-center mt-4 md:mt-0 text-gray-400 md:order-2">
