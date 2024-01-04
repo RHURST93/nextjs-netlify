@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { CButton } from "@coreui/react";
 import headshot from '../../img/headshot.jpg'
 
-const text = ["React", "React Native", "Next", "Node", "Mongo"];
+const text = ["React", "React Native", "Next JS", "Node JS", "Mongo DB"];
 
 const Intro = () => {
   const [index, setIndex] = React.useState(0);
@@ -30,22 +30,25 @@ const Intro = () => {
 
           <div className="text-center mt-10 mb-10 text-3xl md:text-5xl lg:text-6xl">
             <p className="text-white">
-              Hi,👋 my name is Randy. I'm a passionate full-stack developer.
+              Hi,👋 my name is Randy. <br></br> I'm a passionate full-stack developer.
             </p>
-            <p className="text-white">
-              I build things with{" "}
-              <span className=" text-white  border-2  text-bold  rounded pr-2 pl-2 pb-1 ">
+            <p className="text-white mb-4">
+              I build things with <br></br>{" "}
+              
+            
+            </p>
+            <div>
+            <span className="bg-blue-900 drop-shadow-lg text-white  border-2 border-white  text-bold mt-4  rounded pr-2 pl-2 pb-1 ">
                 <TextTransition
-                 style={{border: 'black'}}
+                  
                   inline={true}
                   springConfig={presets.stiff}
                 >
                   {text[index % text.length]}
                 </TextTransition>
               </span>
-              <span className="ml-1">.</span>
-            
-            </p>
+              <span className="ml-1 text-white">.</span>
+            </div>
             
           </div>
 
