@@ -19,13 +19,13 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-slate-600 underline">Links</h3>
             <Link href="#" className="no-underline">
-              Home
+              <a href='#'>Home</a>
             </Link>
             <Link href="#about" className="no-underline">
-              About
+              <a href='#about'>About</a>
             </Link>
             <Link href="#projects" className="no-underline">
-              Projects
+              <a href='#projects'>Projects</a> 
             </Link>
           </div>
 

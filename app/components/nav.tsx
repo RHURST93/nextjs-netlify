@@ -16,13 +16,13 @@ const Nav = () => {
   </Link>
   <div className="flex space-x-4 mr-5">
           <Link href="#" className="hover:text-gray-400 transition-colors duration-300 no-underline">
-            Home
+            <a href='#'>Home</a> 
           </Link>
           <Link href="#about" className="hover:text-gray-400 transition-colors duration-300 no-underline">
-            About
+            <a href='#about'>About</a> 
           </Link>
           <Link href="#projects" className="hover:text-gray-400 transition-colors duration-300 no-underline">
-            Projects
+            <a href='#projects'>Projects</a> 
           </Link>
           {/* Add more links as needed */}
         </div>
