@@ -21,6 +21,7 @@ const Footer = () => {
             <Link href="/" className="no-underline">Home</Link>
             <Link href="/about" className="no-underline">About</Link>
             <Link href="/projects" className="no-underline">Projects</Link>
+            <a href='/projects'>projects</a>
           </div>
 
           {/* Contact Me Button */}
