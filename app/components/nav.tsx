@@ -15,10 +15,10 @@ const Nav = () => {
   <Image className='ml-5' src={code} alt='logo' />
   </Link>
   <div className="flex space-x-4 mr-5">
-          <Link href="#" className="hover:text-gray-400 transition-colors duration-300 no-underline">Home </Link>
-          <Link href="#about" className="hover:text-gray-400 transition-colors duration-300 no-underline">About </Link>
-          <Link href="#projects" className="hover:text-gray-400 transition-colors duration-300 no-underline">
-            Projects</Link>
+          <a href="#" className="hover:text-gray-400 transition-colors duration-300 no-underline">Home </a>
+          <a href="#about" className="hover:text-gray-400 transition-colors duration-300 no-underline">About </a>
+          <a href="#projects" className="hover:text-gray-400 transition-colors duration-300 no-underline">
+            Projects</a>
           {/* Add more links as needed */}
         </div>
 </div>

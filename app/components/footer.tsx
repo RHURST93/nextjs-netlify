@@ -26,15 +26,15 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-slate-600 underline">Links</h3>
-            <Link href="#"  className="no-underline">
+            <a href="#"  className="no-underline">
               Home
-            </Link>
-            <Link href="#about" className="no-underline">
+            </a>
+            <a href="#about" className="no-underline">
               About
-            </Link>
-            <Link href="#projects" className="no-underline">
+            </a>
+            <a href="#projects" className="no-underline">
               Projects
-            </Link>
+            </a>
           </div>
 
           {/* Contact Me Button */}
@@ -42,7 +42,7 @@ const Footer = () => {
             <CButton color="primary">Contact Me</CButton>
           </Link>
         </div>
-        <a href="#about">About</a>
+        
 
         {/* Bottom Text */}
         <div className="text-center mt-4 md:mt-0 text-gray-400 md:order-2">
