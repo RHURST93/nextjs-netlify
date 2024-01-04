@@ -3,8 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import code from "../../img/code.png";
 import { CButton } from "@coreui/react";
+import { useRouter } from 'next/router';
 
 const Footer = () => {
+   const router = useRouter()
   return (
     <footer className="bg-base-300 text-white py-4">
       <div className="container mx-auto md:flex md:justify-between">
@@ -24,13 +26,13 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-slate-600 underline">Links</h3>
-            <Link href="/" className="no-underline">
+            <Link href="/" onClick={() => router.push('/home')} className="no-underline">
               Home
             </Link>
-            <Link href="/about" className="no-underline">
+            <Link href="/about" onClick={() => router.push('/about')} className="no-underline">
               About
             </Link>
-            <Link href="/projects" className="no-underline">
+            <Link href="/projects" onClick={() => router.push('/projects')} className="no-underline">
               Projects
             </Link>
           </div>
