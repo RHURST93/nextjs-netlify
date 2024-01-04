@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import code from '../../img/code.png';
-import { CButton } from '@coreui/react';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import code from "../../img/code.png";
+import { CButton } from "@coreui/react";
 
 const Footer = () => {
   return (
@@ -10,7 +10,13 @@ const Footer = () => {
       <div className="container mx-auto md:flex md:justify-between">
         {/* Left Column */}
         <div className="md:w-1/2 md:order-1 flex items-center justify-center md:justify-start">
-          <Image className="ml-5" src={code} alt="logo" width={60} height={60} />
+          <Image
+            className="ml-5"
+            src={code}
+            alt="logo"
+            width={60}
+            height={60}
+          />
         </div>
 
         {/* Right Column */}
@@ -18,10 +24,15 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-slate-600 underline">Links</h3>
-            <Link href="/" className="no-underline">Home</Link>
-            <Link href="/about" className="no-underline">About</Link>
-            <Link href="/projects" className="no-underline">Projects</Link>
-            <a href='/projects'>projects</a>
+            <Link href="/" className="no-underline">
+              Home
+            </Link>
+            <Link href="/about" className="no-underline">
+              About
+            </Link>
+            <Link href="/projects" className="no-underline">
+              Projects
+            </Link>
           </div>
 
           {/* Contact Me Button */}
