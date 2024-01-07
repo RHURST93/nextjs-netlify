@@ -169,11 +169,11 @@ const About = () => {
                 <tbody>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">React</td>
-                    <td className="px-4 py-2 border">1 year</td>
+                    <td className="px-4 py-2 border">6 months</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">JavaScript</td>
-                    <td className="px-4 py-2 border">1 year</td>
+                    <td className="px-4 py-2 border">6 months</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-4 py-2 border">React Native</td>

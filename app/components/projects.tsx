@@ -1,6 +1,8 @@
+
 import Image, { StaticImageData } from 'next/image';
 import nextAppImage from '../../img/nextapp.png';
 import photo from '../../img/photo.png';
+import { serverHooks } from 'next/dist/server/app-render/entry-base';
 
 interface Project {
   id: number;
