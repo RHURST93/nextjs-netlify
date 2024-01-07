@@ -4,6 +4,8 @@ import nextAppImage from '../../img/nextapp.png';
 import photo from '../../img/photo.png';
 import { serverHooks } from 'next/dist/server/app-render/entry-base';
 import nextimage from '../../img/next.png'
+import ReactNative from '../../img/ReactNative.jpg'
+
 interface Project {
   id: number;
   name: string;
@@ -28,6 +30,13 @@ const projects: Project[] = [
     liveDemoLink: '/',
     photo: nextimage,
   },
+  {
+    id: 1,
+    name: 'React Native Portfolio',
+    description: 'This website showcases my mobile development skills with React Native. This task manager is just the start for this app. I plan to add many different features to help primarily with productivity throughout the day.',
+    liveDemoLink: 'https://snack.expo.dev/@rahurst/react-native-portfolio',
+    photo: ReactNative,
+  },
 ];
 interface ProjectsProps {
     darkMode: boolean;
@@ -38,7 +47,7 @@ const ProjectComponent: React.FC = () => {
     <div className="mx-auto max-w-4xl px-6 "> {/* Centers content and sets max width */}
       <section className='bg-white' id="projects">
         <h2 className="text-2xl font-bold mb-4 underline">Projects</h2>
-        <div className="grid gap-8 lg:grid-cols-2"> {/* Grid layout for projects */}
+        <div className="grid gap-8 lg:grid-cols-3"> {/* Grid layout for projects */}
           {projects.map((project) => (
             <div key={project.id} className="border p-4">
               <div className="mb-4">
