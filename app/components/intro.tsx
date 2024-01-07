@@ -59,7 +59,7 @@ const Intro = () => {
             
             </p>
             <div>
-            <span className="bg-blue-900 drop-shadow-lg text-white  border-2 border-white  text-bold mt-4  rounded pr-2 pl-2 pb-1 ">
+            <span className=" drop-shadow-lg text-white  border-2 border-white  text-bold mt-4  rounded pr-2 pl-2 pb-1 ">
                 <TextTransition
                   
                   inline={true}
