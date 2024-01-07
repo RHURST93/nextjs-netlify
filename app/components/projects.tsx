@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 import nextAppImage from '../../img/nextapp.png';
 import photo from '../../img/photo.png';
 import { serverHooks } from 'next/dist/server/app-render/entry-base';
-
+import nextimage from '../../img/next.png'
 interface Project {
   id: number;
   name: string;
@@ -26,7 +26,7 @@ const projects: Project[] = [
     name: 'Web Development Portfolio',
     description: 'This website showcases my web development skills. I built this project using Next JS and Typescript. I also utilized libraries such as Daisy UI and Core UI to give the page a modern feel. I also used a text transition in my hero.',
     liveDemoLink: '/',
-    photo: nextAppImage,
+    photo: nextimage,
   },
 ];
 interface ProjectsProps {
@@ -42,8 +42,7 @@ const ProjectComponent: React.FC = () => {
           {projects.map((project) => (
             <div key={project.id} className="border p-4">
               <div className="mb-4">
-                <Image src={project.photo} alt={project.name} />
-              </div>
+              <Image src={project.photo} alt={project.name} />              </div>
               <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
               <p className="text-gray-600 mb-2">{project.description}</p>
               <a
