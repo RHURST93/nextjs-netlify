@@ -6,13 +6,17 @@ import Intro from './components/intro'
 import About from './components/about'
 import ProjectComponent from './components/projects'
 import Footer from './components/footer'
-
+import Head from 'next/head';
 
 
 export default function Home() {
   return (
     <>
+        <head>
+          <title>Randy Hurst Web Dev</title></head>
+
     <main>
+
       <Nav />
       <Intro />
       <About />
