@@ -5,7 +5,7 @@ import photo from '../../img/photo.png';
 import { serverHooks } from 'next/dist/server/app-render/entry-base';
 import nextimage from '../../img/next.png'
 import ReactNative from '../../img/ReactNative.jpg'
-
+import qrcode from '../../img/qrcode.png';
 interface Project {
   id: number;
   name: string;
@@ -19,7 +19,7 @@ const projects: Project[] = [
     id: 1,
     name: '@PeaceWithACamera',
     description: 'A website for my wildlife photography. This site was built with React, utilizing Reactstrap and Lightbox.js. I used the gradient in the navbar to make it appear as the sun is peeking in at the corner of the screen. In the footer the leaves signify natural habitats. It felt like the right combonation. ',
-    liveDemoLink: 'https://mellifluous-toffee-499686.netlify.app/',
+    liveDemoLink: 'https://peacewithacamera.netlify.app/',
     photo: photo,
   },
   // Add other projects here
@@ -37,6 +37,13 @@ const projects: Project[] = [
     liveDemoLink: 'https://snack.expo.dev/@rahurst/react-native-portfolio',
     photo: ReactNative,
   },
+  {
+    id:1,
+    name: "Python QRcode Generator",
+    description:"A simple python script to generate QRCodes.",
+    liveDemoLink:'https://codesandbox.io/p/devbox/python-qrcode-generator-5767mg?file=%2Fmain.py%3A32%2C34',
+    photo: qrcode
+  }
 ];
 interface ProjectsProps {
     darkMode: boolean;

@@ -14,7 +14,19 @@ import {
 } from "@coreui/react";
 import "@coreui/coreui/dist/css/coreui.min.css";
 
+
+
+
 const About = () => {
+  
+  const calculateExperience = (startDate: string): number => {
+    const today: Date = new Date();
+    const start: Date = new Date(startDate);
+    const diffTime: number = Math.abs(today.getTime() - start.getTime());
+    const diffMonths: number = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30)); // Assuming 30 days per month
+    return diffMonths;
+  };
+  
   return (
     <>
       <div>
@@ -78,11 +90,11 @@ const About = () => {
                     </table>
                     <h5 className="underline mt-2">Stacks</h5>
                     <CListGroup>
-                      <CListGroupItem>HTML</CListGroupItem>
-                      <CListGroupItem>CSS</CListGroupItem>
-                      <CListGroupItem>Bootstrap</CListGroupItem>
-                      <CListGroupItem>SCSS</CListGroupItem>
-                      <CListGroupItem>GIT</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/html.png')} alt="node logo" className="w-6 h-6 mr-2 inline-block" />HTML</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/css.png')} alt="node logo" className="w-6 h-6 mr-2 inline-block" />CSS</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/bootstrap.png')} alt="node logo" className="w-6 h-6 mr-2 inline-block" />Bootstrap</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/css.png')} alt="node logo" className="w-6 h-6 mr-2 inline-block" />SCSS</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/git.png')} alt="node logo" className="w-6 h-6 mr-2 inline-block" />GIT</CListGroupItem>
                     </CListGroup>
                   </CAccordionBody>
                 </CAccordionItem>
@@ -109,9 +121,9 @@ const About = () => {
                     </table>
                     <h5 className="underline mt-2">Stacks</h5>
                     <CListGroup>
-                      <CListGroupItem>JavaScript</CListGroupItem>
-                      <CListGroupItem>React</CListGroupItem>
-                      <CListGroupItem>React Native</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/js2.png')} alt="javascript logo" className="w-6 h-6 mr-2 inline-block" />JavaScript</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/react.png')} alt="react logo" className="w-6 h-6 mr-2 inline-block" />React</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/react.png')} alt="react logo" className="w-6 h-6 mr-2 inline-block" />React Native</CListGroupItem>
                     </CListGroup>
                   </CAccordionBody>
                 </CAccordionItem>
@@ -138,11 +150,43 @@ const About = () => {
                     </table>
                     <h5 className="underline mt-2">Stacks</h5>
                     <CListGroup>
-                      <CListGroupItem>Node JS</CListGroupItem>
-                      <CListGroupItem>Express JS</CListGroupItem>
-                      <CListGroupItem>Mongo DB</CListGroupItem>
-                      <CListGroupItem>Google Cloud</CListGroupItem>
-                      <CListGroupItem>Middleware</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/node.png')} alt="node js logo" className="w-6 h-6 mr-2 inline-block" />Node JS</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/express.png')} alt="express js logo" className="w-6 h-6 mr-2 inline-block" />Express JS</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/mongo.png')} alt="mongo db logo" className="w-6 h-6 mr-2 inline-block" />Mongo DB</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/gcp.png')} alt="google cloud logo" className="w-6 h-6 mr-2 inline-block" />Google Cloud</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/node.png')} alt="node logo" className="w-6 h-6 mr-2 inline-block" />Middleware</CListGroupItem>
+                    </CListGroup>
+                  </CAccordionBody>
+                </CAccordionItem>
+                <CAccordionItem itemKey={3}>
+                  <CAccordionHeader>
+                    Modern Software Development
+                  </CAccordionHeader>
+                  <CAccordionBody>
+                    <table className="table-auto w-full border-collapse border border-gray-300 mr-5">
+                      <thead>
+                        <tr className="bg-blue-300">
+                          <th className="px-4 py-2 border">School</th>
+                          <th className="px-4 py-2 border">Graduated</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="bg-white">
+                          <td className="px-4 py-2 border">
+                            Nucamp Coding Bootcamp
+                          </td>
+                          <td className="px-4 py-2 border">05/2024</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h5 className="underline mt-2">Stacks</h5>
+                    <CListGroup>
+                      <CListGroupItem><Image src={require('../../img/python.png')} alt="python logo" className="w-6 h-6 mr-2 inline-block" />Python</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/flask.png')} alt="flask logo" className="w-6 h-6 mr-2 inline-block" />Flask</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/mongo.png')} alt="mongo db logo" className="w-6 h-6 mr-2 inline-block" />Docker</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/aws.png')} alt="google cloud logo" className="w-6 h-6 mr-2 inline-block" />AWS</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/django.png')} alt="django logo" className="w-6 h-6 mr-2 inline-block" />Django</CListGroupItem>
+                      <CListGroupItem><Image src={require('../../img/kubernetes.png')} alt="kubernetes logo" className="w-6 h-6 mr-2 inline-block" />Kubernetes</CListGroupItem>
                     </CListGroup>
                   </CAccordionBody>
                 </CAccordionItem>
@@ -168,28 +212,40 @@ const About = () => {
                 </thead>
                 <tbody>
                   <tr className="bg-white">
-                    <td className="px-4 py-2 border">React</td>
-                    <td className="px-4 py-2 border">6 months</td>
+                    <td className="px-4 py-2 border"><Image src={require("../../img/react.png")} alt="react logo" className="w-6 h-6 mr-2 inline-block" />React</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2023-08-01')} months</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-2 border">JavaScript</td>
-                    <td className="px-4 py-2 border">6 months</td>
+                    <td className="px-4 py-2 border"><Image src={require("../../img/js2.png")} alt="javascript logo" className="w-6 h-6 mr-2 inline-block" />JavaScript</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2023-07-01')} months</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-2 border">React Native</td>
-                    <td className="px-4 py-2 border">6 months</td>
+                    <td className="px-4 py-2 border"><Image src={require("../../img/react.png")} alt="react native logo" className="w-6 h-6 mr-2 inline-block" />React Native</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2023-09-01')} months</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-2 border">Mongo DB</td>
-                    <td className="px-4 py-2 border">1 month</td>
+                    <td className="px-4 py-2 border"><Image src={require("../../img/mongo.png")} alt="mongo db logo" className="w-6 h-6 mr-2 inline-block" />Mongo DB</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2023-10-01')} months</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-2 border">Node</td>
-                    <td className="px-4 py-2 border">1 month</td>
+                    <td className="px-4 py-2 border"><Image src={require("../../img/node.png")} alt="nodejs logo" className="w-6 h-6 mr-2 inline-block" />Node</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2023-11-01')} months</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-2 border">Next JS</td>
-                    <td className="px-4 py-2 border">1 month</td>
+                    <td className="px-4 py-2 border"><Image src={require("../../img/nextlogo.png")} alt="next js logo" className="w-6 h-6 mr-2 inline-block" />Next JS</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2023-11-01')} months</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-4 py-2 border"><Image src={require("../../img/python.png")} alt="python logo" className="w-6 h-6 mr-2 inline-block" />Python</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2024-12-15')} months</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-4 py-2 border"><Image src={require("../../img/postgres.png")} alt="postgres logo" className="w-6 h-6 mr-2 inline-block" /> PostgreSQL</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2024-01-01')} months</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-4 py-2 border"><Image src={require("../../img/docker.png")} alt="docker logo" className="w-6 h-6 mr-2 inline-block" />Docker</td>
+                    <td className="px-4 py-2 border">{calculateExperience('2024-02-01')} months</td>
                   </tr>
                   {/* Add more rows for other skills */}
                 </tbody>
