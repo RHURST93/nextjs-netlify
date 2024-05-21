@@ -83,7 +83,7 @@ const Intro = () => {
 
           <div className="flex justify-center mt-8">
             <Link  href="mailto:rahurst93@gmail.com">
-              <button style={{height: '100px', backgroundColor: '#60a5fa' }} color="info"   className="btn btn-lg bg-blue-300 button  text-bold text-center px-5 mb-4 border-2 border-black glass" >Contact Me</button>
+              <button style={{height: '100px', backgroundColor: '#60a5fa' }}    className=" change btn btn-lg bg-blue-300 button  text-bold text-center px-5 mb-4 border-2 border-white  glass" ><h1 className="hover:text-white">Contact Me</h1></button>
             </Link>
           </div>
         </div>
