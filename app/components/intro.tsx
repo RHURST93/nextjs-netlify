@@ -6,6 +6,8 @@ import { CButton } from "@coreui/react";
 import headshot from "../../img/headshot.jpg";
 import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMedium } from '@fortawesome/free-brands-svg-icons';
 
 const text = ["React", "React Native", "Next JS", "Node JS", "Mongo DB"];
 
@@ -60,9 +62,9 @@ const Intro = () => {
                 </a>
                 <a
                   href="#"
-                  className="text-2xl xs:text-2xl sm:text-3xl text-blue-300 hover:text-neutral-950"
+                  className="text-2xl  xs:text-2xl sm:text-3xl text-blue-300 hover:text-neutral-950"
                 >
-                  <FaFacebook />
+                  <FontAwesomeIcon icon={faMedium}/>
                 </a>
               </motion.div>
             </AnimatePresence>
@@ -76,12 +78,12 @@ const Intro = () => {
           >
             <p
               style={{ width: "80%" }}
-              className="text-white text-center mx-auto"
+              className="text-5xl text-white text-center mx-auto"
             >
               Hi,👋 my name is Randy. <br /> I'm a passionate full-stack
               developer.
             </p>
-            <p className="text-white mb-4">
+            <p className=" text-5xl text-white mb-4">
               I build things with <br />
             </p>
             <div>
@@ -100,7 +102,7 @@ const Intro = () => {
                 style={{ height: "100px", backgroundColor: "#60a5fa" }}
                 className=" change btn btn-lg bg-blue-300 button  text-bold text-center px-5 mb-20 border-2 border-white  glass"
               >
-                <h1 className="hover:text-white">Contact Me</h1>
+                <h1 className=" text-slate-500 hover:text-white">Contact Me</h1>
               </button>
             </Link>
           </div>

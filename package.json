@@ -11,6 +11,10 @@
   "dependencies": {
     "@bradgarropy/next-link": "^1.1.0",
     "@coreui/react": "^4.11.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.1",
     "@sendgrid/mail": "^8.1.0",
     "@types/node": "20.10.5",
     "@types/nodemailer": "^6.4.14",
