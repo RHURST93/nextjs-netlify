@@ -41,10 +41,10 @@ const Intro = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className="flex justify-center space-x-4 mt-4"
-                  style={{ fontSize: 20 }}
+                  style={{ fontSize: 45 }}
                 >
-                  <a href="https://github.com/RHURST93" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-neutral-950">
-                    <FaGithub />
+                  <a  href="https://github.com/RHURST93" target="_blank" rel="noopener noreferrer" className=" text-blue-300 hover:text-neutral-950">
+                    <FaGithub className="logo" />
                   </a>
                   <a href="https://www.linkedin.com/in/randy-hurst-2075bab0" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:text-neutral-950">
                     <FaLinkedin />
