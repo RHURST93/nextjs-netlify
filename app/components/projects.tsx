@@ -57,39 +57,34 @@ const ProjectComponent: React.FC = () => {
       {" "}
       {/* Centers content and sets max width */}
       <section className="bg-white" id="projects">
-      <hr  className="hr1" />
-        <h1 className=" font-bold mb-4 text-center underline">
-          Projects
-        </h1>
+        <hr className="hr1" />
+        <h1 className=" font-bold mb-4 text-center underline">Projects</h1>
         <hr className="hr1" />
         <div className="grid gap-8 lg:grid-cols-3">
           {" "}
-          
           {/* Grid layout for projects */}
           {projects.map((project) => (
             <div key={project.id} className="border p-4">
               <div>
-              <div className="mb-4">
-                <Image src={project.photo} alt={project.name} />{" "}
+                <div className="mb-4">
+                  <Image src={project.photo} alt={project.name} />{" "}
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
+                <p className="text-gray-600 mb-2">{project.description}</p>
+                <a
+                  href={project.liveDemoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  Live Demo
+                </a>
               </div>
-              <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
-              <p className="text-gray-600 mb-2">{project.description}</p>
-              <a
-                href={project.liveDemoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Live Demo
-              </a>
             </div>
-            
-            </div>
-            
           ))}
         </div>
         <div>
-        <hr className="hr" />
+          <hr className="hr" />
         </div>
       </section>
     </div>
