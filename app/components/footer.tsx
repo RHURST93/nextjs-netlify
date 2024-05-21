@@ -13,11 +13,11 @@ const Footer = () => {
         {/* Left Column */}
         <div className="md:w-1/2 md:order-1 flex items-center justify-center md:justify-start">
           <Image
-            className="ml-5"
+            className=" mx-auto"
             src={code}
             alt="logo"
-            width={60}
-            height={60}
+            width={50}
+            height={50}
           />
         </div>
 

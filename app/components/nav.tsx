@@ -14,13 +14,13 @@ const Nav = () => {
     <>
     
 
-<div className="navbar bg-base-300 fixed w-full">
+<div className="navbar  bg-base-300 fixed w-full">
   <a href='/'>
   <Image className='ml-5' src={code} alt='logo' />
   </a>
   
 
-  <div className="flex space-x-4 mr-5 text-blue-800 ">
+  <div className="flex  space-x-4 mr-5 text-blue-800 ">
           <a href="#" className="items-center flex hover:text-gray-400 transition-colors duration-300 no-underline"><IoHomeOutline/>
  Home</a>
           <a href="#about" className="items-center flex hover:text-gray-400 transition-colors duration-300 no-underline"><MdOutlineQuestionMark />

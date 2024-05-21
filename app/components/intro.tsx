@@ -18,17 +18,18 @@ const Intro = () => {
 
   return (
     <>
-      <section id="intro" className="h-screen">
-        <div className="bg-cover bg-center h-screen flex flex-col justify-center items-center background-image">
-          <div className="items-center">
+      <section id="intro" className="h-screen sm:pb-8">
+        <div  className="bg-cover   pt-8  bg-center h-screen flex flex-col justify-center items-center background-image ">
+          <div  className="items-center ">
             <motion.div
-              className="pl-20 ml-5"
+              className="pl-20 ml-5 xs:w-40 xs:pt-8"
+              
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: -50 }}
               transition={{ type: "spring", stiffness: 110, damping: 25 }}
             >
               <Image
-                className="rounded-full mt-5"
+                className="rounded-full mt-8  "
                 src={headshot}
                 width={150}
                 height={150}
@@ -73,8 +74,8 @@ const Intro = () => {
             transition={{ type: "spring", stiffness: 110, damping: 25 }}
           >
             <p
-              style={{ width: "80%", marginLeft: 90 }}
-              className="text-white text-center"
+              style={{ width: "80%"  }}
+              className="text-white text-center mx-auto"
             >
               Hi,👋 my name is Randy. <br /> I'm a passionate full-stack
               developer.
@@ -92,11 +93,11 @@ const Intro = () => {
             </div>
           </motion.div>
 
-          <div className="flex justify-center mt-8">
+          <div  className="flex justify-center  mb-8">
             <Link href="mailto:rahurst93@gmail.com">
               <button
                 style={{ height: "100px", backgroundColor: "#60a5fa" }}
-                className=" change btn btn-lg bg-blue-300 button  text-bold text-center px-5 mb-4 border-2 border-white  glass"
+                className=" change btn btn-lg bg-blue-300 button  text-bold text-center px-5 mb-20 border-2 border-white  glass"
               >
                 <h1 className="hover:text-white">Contact Me</h1>
               </button>

@@ -79,8 +79,8 @@ const About: React.FC = () => {
                 height={300}
               />
             </div>
-            <div className="sm:order-2 md:order-2 lg:order-2">
-              <p className="mx-auto mt-4 text-justify sm:text-left xs:w-80 mr-5 px-3 text-wrap">
+            <div className="sm:order-2 md:order-2 lg:order-2 ">
+              <p className=" mx-auto mt-4 text-justify sm:text-left xs:w-80 mr-5 px-3 text-wrap">
                 I am a passionate individual with expertise in React, React
                 Native, MongoDB, Node.js, HTML, and CSS. Hailing from the heart
                 of Oklahoma, I possess a deep connection to my roots and embrace
