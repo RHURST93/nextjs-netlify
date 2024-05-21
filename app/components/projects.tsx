@@ -57,9 +57,11 @@ const ProjectComponent: React.FC = () => {
       {" "}
       {/* Centers content and sets max width */}
       <section className="bg-white" id="projects">
+        <div className="flex justify-center row ">
         <hr className="hr1" />
         <h1 className=" font-bold mb-4 text-center underline">Projects</h1>
-        <hr className="hr1" />
+        <hr className="hr1 text-center" />
+        </div>
         <div className="grid gap-8 lg:grid-cols-3">
           {" "}
           {/* Grid layout for projects */}

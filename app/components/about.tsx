@@ -63,11 +63,12 @@ const About: React.FC = () => {
   return (
     <>
       <div>
-        <hr className="hr" />
-        <h1 className="text-center underline mt-4">About Me</h1>
+        <div className="flex justify-center mt-2 row">
+        <hr className="hr1" />
+        <h1 className="text-center underline ">About Me</h1>
 
-        <hr className="hr" />
-
+        <hr className="hr1" />
+        </div>
         <motion.div id="about" className="bg-white p-4" animate={introControls}>
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 items-center">
             <div className="sm:order-2">
@@ -96,10 +97,12 @@ const About: React.FC = () => {
             </div>
           </div>
         </motion.div>
-        <hr className="hr" />
+        <div className="flex justify-center row">
+        <hr className="hr1" />
         <h1 className="text-center underline">Education</h1>
 
-        <hr className="hr" />
+        <hr className="hr1" />
+        </div>
         <motion.div
           id="education"
           className="bg-white p-4"
@@ -362,10 +365,14 @@ const About: React.FC = () => {
             </CAccordionItem>
           </CAccordion>
         </motion.div>
-        <hr className="hr" />
+        <div className="flex justify-center row">
+
+          <hr className="hr1" />
         <h1 className="mx-auto  text-center underline">Skills</h1>
 
-        <hr className="hr" />
+        <hr className="hr1" />
+        </div>
+        
 
         <motion.div
           id="skills"

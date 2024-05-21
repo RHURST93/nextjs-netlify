@@ -19,17 +19,16 @@ const Intro = () => {
   return (
     <>
       <section id="intro" className="h-screen sm:pb-8">
-        <div  className="bg-cover   pt-8  bg-center h-screen flex flex-col justify-center items-center background-image ">
-          <div  className="items-center ">
+        <div className="bg-cover   pt-8  bg-center h-screen flex flex-col justify-center items-center background-image ">
+          <div className="items-center    xs:pt-8">
             <motion.div
-              className="pl-20 ml-5 xs:w-40 xs:pt-8"
-              
+              className="pl-20 ml-5   "
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: -50 }}
               transition={{ type: "spring", stiffness: 110, damping: 25 }}
             >
               <Image
-                className="rounded-full mt-8  "
+                className="rounded-full mt-8  xs:w-20 sm:w-40  lg:w-48  "
                 src={headshot}
                 width={150}
                 height={150}
@@ -41,14 +40,13 @@ const Intro = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="flex justify-center space-x-4 mt-4"
-                style={{ fontSize: 45 }}
+                className=" flex justify-center space-x-4 mt-4"
               >
                 <a
                   href="https://github.com/RHURST93"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" text-blue-300 hover:text-neutral-950"
+                  className="text-2xl text-blue-300 xs:text-2xl sm:text-3xl hover:text-neutral-950"
                 >
                   <FaGithub className="logo" />
                 </a>
@@ -56,11 +54,14 @@ const Intro = () => {
                   href="https://www.linkedin.com/in/randy-hurst-2075bab0"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-300 hover:text-neutral-950"
+                  className=" text-2xl text-blue-300 xs:text-2xl sm:text-3xl hover:text-neutral-950"
                 >
                   <FaLinkedin />
                 </a>
-                <a href="#" className="text-blue-300 hover:text-neutral-950">
+                <a
+                  href="#"
+                  className="text-2xl xs:text-2xl sm:text-3xl text-blue-300 hover:text-neutral-950"
+                >
                   <FaFacebook />
                 </a>
               </motion.div>
@@ -74,7 +75,7 @@ const Intro = () => {
             transition={{ type: "spring", stiffness: 110, damping: 25 }}
           >
             <p
-              style={{ width: "80%"  }}
+              style={{ width: "80%" }}
               className="text-white text-center mx-auto"
             >
               Hi,👋 my name is Randy. <br /> I'm a passionate full-stack
@@ -93,7 +94,7 @@ const Intro = () => {
             </div>
           </motion.div>
 
-          <div  className="flex justify-center  mb-8">
+          <div className="flex justify-center  mb-8">
             <Link href="mailto:rahurst93@gmail.com">
               <button
                 style={{ height: "100px", backgroundColor: "#60a5fa" }}

@@ -14,7 +14,13 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       screens: {
-        'xs': '375px', // Add custom screen size
+        'xs': '350px', // Add custom screen size
+        'sm': '600px',  // Small breakpoint (default)
+        'md': '706px',  // Medium breakpoint (default)
+        'lg': '800px', // Large breakpoint (default)
+        'xl': '1440px', // Extra large breakpoint
+        
+        
       },
     },
   },

@@ -3,10 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import code from "../../img/code.png";
 import { CButton } from "@coreui/react";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 const Footer = () => {
-   
   return (
     <footer className="bg-base-300 text-white py-4">
       <div className="container mx-auto md:flex md:justify-between">
@@ -26,7 +25,7 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-slate-600 underline">Links</h3>
-            <a href="#"  className="no-underline">
+            <a href="#" className="no-underline">
               Home
             </a>
             <a href="#about" className="no-underline">
@@ -42,7 +41,6 @@ const Footer = () => {
             <CButton color="primary">Contact Me</CButton>
           </Link>
         </div>
-        
 
         {/* Bottom Text */}
         <div className="text-center mt-4 md:mt-0 text-gray-400 md:order-2">
