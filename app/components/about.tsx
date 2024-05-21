@@ -93,9 +93,11 @@ const About: React.FC = () => {
             </div>
           </div>
         </motion.div>
+        <hr className="hr" />
+        <h1 className="text-center underline">Education</h1>
 
+        <hr className="hr" />
         <motion.div id="education" className="bg-white p-4" animate={educationControls}>
-          <h2 className="text-center underline">Education</h2>
           
     
 
@@ -281,10 +283,15 @@ const About: React.FC = () => {
     </CAccordionBody>
   </CAccordionItem>
           </CAccordion>
+          
+
         </motion.div>
+        <hr  className="hr" />
+        <h1 className="mx-auto  text-center underline">Skills</h1>
+
+        <hr  className="hr" />
 
         <motion.div id="skills" className="bg-white p-4" animate={skillsControls}>
-          <h2 className="mx-auto text-center underline">Skills</h2>
           <table className="table-auto w-full border-collapse border border-gray-300 mr-5 " width={200}>
           <thead>
     <tr className="bg-blue-300">
@@ -334,6 +341,7 @@ const About: React.FC = () => {
           </table>
         </motion.div>
       </div>
+      
     </>
   );
 };

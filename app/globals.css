@@ -45,3 +45,40 @@ body {
 
 
 
+.hr:hover {
+  color: blue;
+  width: 45vw;
+  transition: .05s;
+}
+/* styles/globals.css */
+.hr {
+  margin-left: 7%;
+  width: 85vw;
+  
+  border-width: 10px;
+  border-radius: 45%;
+  transition: width 0.05s, transform 0.05s;
+  transform-origin: center;
+}
+
+.hr:hover {
+  border-color: blue; /* Note: use `border-color` instead of `color` for hr */
+  width: 45vw;
+  transform: translateX(20vh);
+}
+.hr1 {
+  margin-left: 4%;
+  width: 85vw;
+  
+  border-width: 10px;
+  border-radius: 45%;
+  transition: width 0.05s, transform 0.05s;
+  transform-origin: center;
+}
+.hr1:hover {
+  border-color: blue; /* Note: use `border-color` instead of `color` for hr */
+  width: 45vw;
+  transform: translateX(20vh);
+}
+
+
