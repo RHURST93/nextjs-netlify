@@ -365,9 +365,9 @@ const About: React.FC = () => {
             </CAccordionItem>
           </CAccordion>
         </motion.div>
-        <div className="flex justify-center row">
+        <div className="flex justify-center row ">
 
-          <hr className="hr1" />
+          <hr className="hr1 " />
         <h1 className="mx-auto  text-center underline">Skills</h1>
 
         <hr className="hr1" />
