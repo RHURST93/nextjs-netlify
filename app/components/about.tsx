@@ -512,6 +512,13 @@ const About: React.FC = () => {
           </table>
         </motion.div>
       </div>
+      <div className="flex justify-center row ">
+
+          <hr className="hr1 " />
+        <h1 className="mx-auto  text-center underline">Projects</h1>
+
+        <hr className="hr1" />
+        </div>
     </>
   );
 };
