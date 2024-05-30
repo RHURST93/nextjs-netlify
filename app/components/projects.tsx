@@ -53,6 +53,7 @@ interface ProjectsProps {
 }
 const ProjectComponent: React.FC = () => {
   return (
+    <>
     
     <div className="mx-auto max-w-4xl px-6 ">
 
@@ -86,14 +87,19 @@ const ProjectComponent: React.FC = () => {
           ))}
         </div>
         <div>
-        <div className="flex justify-center row ">
-
-        <hr className="hr1 mt-3" />
-        </div>
+        
 
         </div>
       </section>
+      
     </div>
+    <div className="flex justify-center row ">
+
+    
+
+  <hr className="hr1 mt-3" />
+  </div>
+  </>
   );
 };
 
