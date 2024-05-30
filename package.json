@@ -11,6 +11,7 @@
   "dependencies": {
     "@bradgarropy/next-link": "^1.1.0",
     "@coreui/react": "^4.11.1",
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

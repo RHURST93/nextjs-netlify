@@ -5,6 +5,7 @@ import { serverHooks } from "next/dist/server/app-render/entry-base";
 import nextimage from "../../img/next.png";
 import ReactNative from "../../img/ReactNative.jpg";
 import qrcode from "../../img/qrcode.png";
+import Intellichat from "../../img/Intellichat.png"
 interface Project {
   id: number;
   name: string;
@@ -27,7 +28,7 @@ const projects: Project[] = [
     id: 1,
     name: "Web Development Portfolio",
     description:
-      "This website showcases my web development skills. I built this project using Next JS and Typescript. I also utilized libraries such as Daisy UI and Core UI to give the page a modern feel. I also used a text transition in my hero.",
+      "This website showcases my web development skills. I built this project using Next JS and Typescript. I also utilized libraries such as Daisy UI Core UI, and Framer Motion to give the page a modern feel. I also used a text transition in my hero.",
     liveDemoLink: "/",
     photo: nextimage,
   },
@@ -46,6 +47,14 @@ const projects: Project[] = [
     liveDemoLink:
       "https://codesandbox.io/p/devbox/python-qrcode-generator-5767mg?file=%2Fmain.py%3A32%2C34",
     photo: qrcode,
+  },
+  {
+    id: 1,
+    name: "Python Chatbot",
+    description: "This a.i. chat assistant is built with Flask, JQuery, OpenAI API to act as a resource for code related questions. This chatbot will not complete code for users, but does ensure all information leading to the solution is available, leading to higher retention of learned concepts.",
+    liveDemoLink:
+    "",
+    photo: Intellichat,
   },
 ];
 interface ProjectsProps {

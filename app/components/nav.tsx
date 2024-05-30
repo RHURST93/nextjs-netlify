@@ -1,40 +1,59 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Link from 'next/link';
-import code from '../../img/code.png';
 import Image from 'next/image';
-import { IoHomeOutline } from "react-icons/io5";
-import { MdOutlineQuestionMark } from "react-icons/md";
-import { GrProjects } from "react-icons/gr";
-import { IoBookOutline } from "react-icons/io5";
+import code from '../../img/code.png';
+import {
+  CNavbar,
+  CNavbarBrand,
+  CContainer,
+  CNavbarToggler,
+  CCollapse,
+  CNavItem,
+  CNavLink,
+  CNavbarNav
+} from '@coreui/react';
 
-
- /** convert anchor elements to Link elements */
 const Nav = () => {
-  return (
-    <>
-    
-
-<div className="navbar  bg-base-300 fixed w-full" >
-  <a href='/'>
-  <Image className='ml-5' src={code} alt='logo' />
-  </a>
+  const [visible, setVisible] = useState(false);
   
-
-  <div className="flex  space-x-4 mr-5 text-blue-800 ">
-          <a href="#" className="items-center flex hover:text-gray-400 transition-colors duration-300 no-underline"><IoHomeOutline/>
- Home</a>
-          <a href="#about" className="items-center flex hover:text-gray-400 transition-colors duration-300 no-underline"><MdOutlineQuestionMark />
-About</a>
-          <a href="#projects" className="items-center flex hover:text-gray-400 transition-colors duration-300 no-underline">
-            
-          <IoBookOutline />
-Projects</a>
-          {/* Add more links as needed */}
-        </div>
-</div>
-
-</>
-  )
+  return (
+    <CNavbar  expand="lg" className="bg-base-300" placement='sticky-top'>
+      <CContainer fluid>
+        <CNavbarBrand href="/">
+          <Image alt='brand logo' src={code} />
+        </CNavbarBrand>
+        <CNavbarToggler onClick={() => setVisible(!visible)} />
+        <CCollapse className="navbar-collapse" visible={visible}>
+          <CNavbarNav>
+            <CNavItem>
+              <Link href="/" passHref>
+                <CNavLink active>
+                  <i className="mr-1 fas fa-home"></i> Home
+                </CNavLink>
+              </Link>
+            </CNavItem>
+            <CNavItem>
+              <Link href="#about" passHref>
+                <CNavLink>
+                  <i className="mr-1 fas fa-question-circle"></i> About
+                </CNavLink>
+              </Link>
+            </CNavItem>
+            <CNavItem>
+              <Link href="#projects" passHref>
+                <CNavLink>
+                  <i className="mr-1 fas fa-book"></i> Projects
+                </CNavLink>
+              </Link>
+            </CNavItem>
+            <CNavItem>
+              
+            </CNavItem>
+          </CNavbarNav>
+        </CCollapse>
+      </CContainer>
+    </CNavbar>
+  );
 }
 
-export default Nav
+export default Nav;
