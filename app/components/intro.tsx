@@ -8,10 +8,17 @@ import {  FaLinkedin, FaGithub } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMedium } from '@fortawesome/free-brands-svg-icons';
+import ContactModal from "./ContactModal";
+import { useState } from "react";
+import code from '../../img/code.png'
 const text = ["React", "React Native", "Next JS", "Node JS", "Mongo DB"];
 
 const Intro = () => {
   const [index, setIndex] = React.useState(0);
+  const [visible, setVisible] = useState<boolean>(false);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const openModal = () => setIsModalVisible(true);
+  const closeModal = () => setIsModalVisible(false);
   React.useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 3000);
     return () => clearInterval(intervalId);
@@ -20,19 +27,19 @@ const Intro = () => {
   return (
     <>
       <section id="intro" className="h-screen sm:pb-8">
-        <div className="bg-cover   pt-8  bg-center h-screen flex flex-col justify-center items-center background-image ">
+        <div className="bg-cover pb-8   pt-8  bg-center h-screen flex flex-col justify-center items-center background-image ">
           <div className="items-center    xs:pt-8">
             <motion.div
-              className="pl-20 ml-5   "
+              className="pl-20 ml-5 pt-5  "
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: -50 }}
               transition={{ type: "spring", stiffness: 110, damping: 25 }}
             >
               <Image
-                className="rounded-full mt-8  xs:w-20 sm:w-40  lg:w-48  "
+                className="rounded-full mt-9  xs:w-20 sm:w-20  lg:w-40  "
                 src={headshot}
-                width={150}
-                height={150}
+                width={100}
+                height={100}
                 alt="Picture of developer"
               />
             </motion.div>
@@ -95,15 +102,15 @@ const Intro = () => {
             </div>
           </motion.div>
 
-          <div className="flex justify-center  mb-8">
-            <Link href="mailto:rahurst93@gmail.com">
-              <button
-                style={{ height: "100px", backgroundColor: "#60a5fa" }}
+          <div className="flex justify-center pb-3  mb-8">
+          <button
+                onClick={openModal}
+                style={{ height: "90px", backgroundColor: "#60a5fa" }}
                 className=" change btn btn-lg bg-blue-300 button  text-bold text-center px-5 mb-20 border-2 border-white  glass"
               >
                 <h1 className="hover:text-white">Contact Me</h1>
               </button>
-            </Link>
+            <ContactModal visible={isModalVisible} onClose={closeModal} code={code} />
           </div>
         </div>
       </section>

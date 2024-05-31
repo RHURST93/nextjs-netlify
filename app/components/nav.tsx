@@ -20,28 +20,28 @@ const Nav = () => {
     <CNavbar  expand="lg" className="bg-base-300" placement='sticky-top'>
       <CContainer fluid>
         <CNavbarBrand href="/">
-          <Image alt='brand logo' src={code} />
+          <Image className='ml-4' alt='brand logo' src={code} />
         </CNavbarBrand>
         <CNavbarToggler onClick={() => setVisible(!visible)} />
         <CCollapse className="navbar-collapse" visible={visible}>
-          <CNavbarNav>
-            <CNavItem>
+          <CNavbarNav className='ml-auto'>
+            <CNavItem  >
               <Link href="/" passHref>
-                <CNavLink active>
+                <CNavLink className='ml-2' active>
                   <i className="mr-1 fas fa-home"></i> Home
                 </CNavLink>
               </Link>
             </CNavItem>
-            <CNavItem>
+            <CNavItem >
               <Link href="#about" passHref>
-                <CNavLink>
+                <CNavLink className='ml-2'>
                   <i className="mr-1 fas fa-question-circle"></i> About
                 </CNavLink>
               </Link>
             </CNavItem>
-            <CNavItem>
+            <CNavItem >
               <Link href="#projects" passHref>
-                <CNavLink>
+                <CNavLink className='ml-2'>
                   <i className="mr-1 fas fa-book"></i> Projects
                 </CNavLink>
               </Link>
