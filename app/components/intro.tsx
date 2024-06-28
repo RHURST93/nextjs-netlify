@@ -102,7 +102,7 @@ const Intro = () => {
             </div>
           </motion.div>
 
-          <div className="flex justify-center pb-3  mb-8">
+          <a href="mailto:hurstdev93@gmail.com" className="flex justify-center pb-3 no-underline  mb-8">
           <button
                 onClick={openModal}
                 style={{ height: "90px", backgroundColor: "#60a5fa" }}
@@ -110,8 +110,7 @@ const Intro = () => {
               >
                 <h1 className="hover:text-white">Contact Me</h1>
               </button>
-            <ContactModal visible={isModalVisible} onClose={closeModal} code={code} />
-          </div>
+          </a>
         </div>
       </section>
     </>

@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent } from "react";
 import {
   CModal,
   CModalHeader,
@@ -10,39 +10,59 @@ import {
   CFormLabel,
   CFormInput,
   CFormTextarea,
-} from '@coreui/react';
-import logo from '../../img/code.png'
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+} from "@coreui/react";
+import logo from "../../img/code.png";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 
 interface ContactModalProps {
   visible: boolean;
   onClose: () => void;
-  code: {}
+  code: {};
 }
 
-const ContactModal: React.FC<ContactModalProps> = ({ visible, onClose, code }) => {
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
+const ContactModal: React.FC<ContactModalProps> = ({
+  visible,
+  onClose,
+  code,
+}) => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic
-    console.log('Form submitted', { name, email, message });
+    try {
+      const response = await fetch("/api/route", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      console.log("Success:", data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+
+    console.log("Form submitted", { name, email, message });
     onClose();
   };
 
   return (
     <CModal visible={visible} onClose={onClose}>
-      <CModalHeader className='bg-blue-300 '>
-        <Image className='mr-1' src={logo} alt= 'brand logo'/>
-        <CModalTitle className=' bg-blue-300'>Contact Me</CModalTitle>
-        
+      <CModalHeader className="bg-blue-300">
+        <Image className="mr-1" src={logo} alt="brand logo" />
+        <CModalTitle className="bg-blue-300">Contact Me</CModalTitle>
       </CModalHeader>
-      <CModalBody className='bg-dark text-light'>
+      <CModalBody className="bg-dark text-light">
         <CForm onSubmit={handleSubmit}>
           <div className="mb-3">
             <CFormLabel htmlFor="name">Name</CFormLabel>
@@ -75,15 +95,12 @@ const ContactModal: React.FC<ContactModalProps> = ({ visible, onClose, code }) =
             />
           </div>
           <CButton type="submit" color="primary">
-          <FontAwesomeIcon className='mr-1' icon={faPaperPlane} />
-
+            <FontAwesomeIcon className="mr-1" icon={faPaperPlane} />
             Submit
           </CButton>
         </CForm>
       </CModalBody>
-      <CModalFooter  style={{height: '90px',backgroundColor: '#93c5fd'}}>
-        
-      </CModalFooter>
+      <CModalFooter style={{ height: "90px", backgroundColor: "#93c5fd" }} />
     </CModal>
   );
 };
