@@ -15,8 +15,7 @@ import logo from "../../img/code.png";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-
-
+import "dotenv/config";
 interface ContactModalProps {
   visible: boolean;
   onClose: () => void;
@@ -31,29 +30,40 @@ const ContactModal: React.FC<ContactModalProps> = ({
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+  const AccessKey = process.env.MAIL_API;
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const target = e.target as typeof e.target & {
+      name: { value: string };
+      email: { value: string };
+      message: { value: string };
+    };
 
-    try {
-      const response = await fetch("/api/route", {
-        method: "POST",
-        body: formData,
-      });
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "c264e363-41fa-400e-988b-5a66003f1e2e",
+        name: target.name.value,
+        email: target.email.value,
+        message: target.message.value,
+      }),
+    });
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const data = await response.json();
-      console.log("Success:", data);
-    } catch (error) {
-      console.error("Error:", error);
+    const result = await response.json();
+    if (result.success) {
+      console.log(result);
+      alert("Message successfully sent");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } else {
+      console.error("Error:", result);
+      alert("Error, please try resubmitting the form");
     }
-
-    console.log("Form submitted", { name, email, message });
-    onClose();
   };
 
   return (
@@ -69,6 +79,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
             <CFormInput
               type="text"
               id="name"
+              name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -78,6 +89,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
             <CFormLabel htmlFor="email">Email</CFormLabel>
             <CFormInput
               type="email"
+              name="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}

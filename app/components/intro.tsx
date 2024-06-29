@@ -4,13 +4,13 @@ import TextTransition, { presets } from "react-text-transition";
 import Link from "next/link";
 import { CButton } from "@coreui/react";
 import headshot from "../../img/headshot.jpg";
-import {  FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMedium } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedium } from "@fortawesome/free-brands-svg-icons";
 import ContactModal from "./ContactModal";
 import { useState } from "react";
-import code from '../../img/code.png'
+import code from "../../img/code.png";
 const text = ["React", "React Native", "Next JS", "Node JS", "Mongo DB"];
 
 const Intro = () => {
@@ -102,15 +102,19 @@ const Intro = () => {
             </div>
           </motion.div>
 
-          <a href="mailto:hurstdev93@gmail.com" className="flex justify-center pb-3 no-underline  mb-8">
-          <button
-                onClick={openModal}
-                style={{ height: "90px", backgroundColor: "#60a5fa" }}
-                className=" change btn btn-lg bg-blue-300 button  text-bold text-center px-5 mb-20 border-2 border-white  glass"
-              >
-                <h1 className="hover:text-white">Contact Me</h1>
-              </button>
+          <a
+            className="flex justify-center pb-3 no-underline  mb-8"
+          >
+            <button
+              onClick={openModal}
+              style={{ height: "90px", backgroundColor: "#60a5fa" }}
+              className=" change btn btn-lg bg-blue-300 button  text-bold text-center px-5 mb-20 border-2 border-white  glass"
+            >
+              <h1 className="hover:text-white">Contact Me</h1>
+            </button>
           </a>
+          <ContactModal visible={isModalVisible} onClose={closeModal} code={code} />
+
         </div>
       </section>
     </>

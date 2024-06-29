@@ -8,6 +8,7 @@ import ProjectComponent from './components/projects'
 import Footer from './components/footer'
 import head from 'next/head';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import ContactModal from './components/ContactModal'
 
 
 
