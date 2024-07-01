@@ -4,8 +4,13 @@ import Image from "next/image";
 import code from "../../img/code.png";
 import { CButton } from "@coreui/react";
 import { useRouter } from "next/router";
-
+import { useState } from "react";
+import ContactModal from "./ContactModal";
 const Footer = () => {
+  const [visible, setVisible] = useState<boolean>(false);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const openModal = () => setIsModalVisible(true);
+  const closeModal = () => setIsModalVisible(false);
   return (
     <footer className="bg-base-300 text-white py-4">
       <div className="container mx-auto md:flex md:justify-between">
@@ -37,9 +42,13 @@ const Footer = () => {
           </div>
 
           {/* Contact Me Button */}
-          <Link href="mailto:rahurst93@gmail.com" className="no-underline">
-            <CButton color="primary">Contact Me</CButton>
-          </Link>
+          <div className="">
+            <CButton className="ml-3" onClick={openModal} color="primary">Contact Me</CButton>
+
+          </div>
+          
+          <ContactModal visible={isModalVisible} onClose={closeModal} code={code} />
+
         </div>
 
         {/* Bottom Text */}

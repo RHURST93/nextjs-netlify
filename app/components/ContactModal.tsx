@@ -64,6 +64,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
       console.error("Error:", result);
       alert("Error, please try resubmitting the form");
     }
+    onClose()
   };
 
   return (
